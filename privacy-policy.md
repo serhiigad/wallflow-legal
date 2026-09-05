@@ -173,9 +173,9 @@ no ad SDKs, and no cross-app tracking in WallFlow.
   data, write to **serhiigad@gmail.com** from any address; tell us your board name and (if known)
   device name, and we will remove it and confirm. Uninstalling the app deletes all on-device data.
 
-### Account deletion
+### Account and data deletion
 
-To delete your WallFlow account and all data associated with it, follow these steps:
+**Delete your whole account (and all data with it):**
 
 1. **Send an email** to **serhiigad@gmail.com** with the subject line `WallFlow account deletion`.
    In the message, name your board (e.g. "Living Room TV") and, if you know it, the device name
@@ -191,8 +191,14 @@ To delete your WallFlow account and all data associated with it, follow these st
    expire after ~90 days, Firebase Analytics data expires automatically) — these are retained by
    Google under the Firebase terms, not by us.
 
-You can also delete individual items (notes, lists, events, devices) yourself at any time in the
-app; unpairing a device removes its registry entry immediately.
+**Delete only some of your data (without deleting the account):**
+
+1. Open the relevant section in the app — on the phone remote or on the TV: notes, family lists,
+   calendar events, or the list of paired devices.
+2. Use the delete/remove action on the item you want gone: a note, a whole list or a single list
+   item, an event, or a device (unpairing).
+3. The change syncs to every paired device immediately and the item is removed from our servers.
+   Expired notes are deleted automatically by the TV host.
 
 ---
 
