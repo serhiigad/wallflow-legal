@@ -2,10 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1"><!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>WallFlow — Privacy Policy</title>
 <style>
@@ -190,8 +186,8 @@ and no cross-app tracking in WallFlow.</p>
       data.</li>
 </ul>
 
-<h3 id="account-deletion">Account deletion</h3>
-<p>To delete your WallFlow account and all data associated with it, follow these steps:</p>
+<h3 id="account-deletion">Account and data deletion</h3>
+<p><strong>Delete your whole account (and all data with it):</strong></p>
 <ol>
   <li><strong>Send an email</strong> to <a href="mailto:serhiigad@gmail.com">serhiigad@gmail.com</a>
       with the subject line <code>WallFlow account deletion</code>. In the message, name your board
@@ -208,223 +204,15 @@ and no cross-app tracking in WallFlow.</p>
       crash reports expire after ~90 days, Firebase Analytics data expires automatically) — these
       are retained by Google under the Firebase terms, not by us.</li>
 </ol>
-<p>You can also delete individual items (notes, lists, events, devices) yourself at any time in
-the app; unpairing a device removes its registry entry immediately.</p>
-
-<h2>6. Security</h2>
-<p>All network traffic uses HTTPS/TLS. On the device, sensitive preferences are stored in
-<code>EncryptedSharedPreferences</code> (AES-256). Board access is gated by Firebase Authentication plus Realtime
-Database security rules that check device membership on every read/write. No plaintext secrets or API keys are shipped
-in the app.</p>
-
-<h2>7. Your rights</h2>
-<p>You can, at any time: <strong>access</strong> your board content (it is visible on your devices),
-<strong>correct</strong> it (edit in the app), <strong>delete</strong> it (in the app, or by request per §5),
-<strong>export</strong> it (copy your notes/lists; the data format is plain text in the board),
-<strong>withdraw consent</strong> (revoke the optional calendar permission in Android settings; stop using optional
-Google sign-in; uninstall).</p>
-<p>If you are in the EU/UK, you additionally have the GDPR rights of restriction, objection, and complaint to your
-supervisory authority. Legal basis for processing: consent (optional features: calendar, Google sign-in, IP detection,
-Drive) and legitimate interest (syncing the board you created between your own devices, crash fixing). Requests:
-<a href="mailto:serhiigad@gmail.com">serhiigad@gmail.com</a>.</p>
-
-<h2>8. Children</h2>
-<p>WallFlow is a general-audience home-screen utility and is <strong>not directed at children under 13</strong>.
-We do not knowingly collect their data. If you believe a child's data reached us, contact us and we will delete it.</p>
-
-<h2>9. Changes to this policy</h2>
-<p>We will post any change here with an updated effective date; material changes will also be noted in the app's
-store listing. The canonical copy of this document lives in the WallFlow project repository
-(<code>docs/privacy-policy.md</code>).</p>
-
-<h2>10. Contact</h2>
-<p>WallFlow developer — email: <a href="mailto:serhiigad@gmail.com">serhiigad@gmail.com</a></p>
-
-</body>
-</html>
-
-<title>WallFlow — Privacy Policy</title>
-<style>
-  :root { color-scheme: light dark; }
-  body { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-         max-width: 46rem; margin: 0 auto; padding: 2rem 1.25rem 4rem; line-height: 1.6;
-         color: #1c1b1f; background: #fdfcfe; }
-  h1 { font-size: 1.7rem; margin-bottom: .25rem; }
-  h2 { font-size: 1.25rem; margin-top: 2.2rem; border-bottom: 1px solid #d9d5e0; padding-bottom: .3rem; }
-  h3 { font-size: 1.05rem; margin-top: 1.6rem; }
-  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .95rem; }
-  th, td { border: 1px solid #cfc9da; padding: .45rem .6rem; text-align: left; vertical-align: top; }
-  th { background: #f0ecf6; }
-  code { background: #f0ecf6; padding: .1rem .3rem; border-radius: 4px; font-size: .9em; }
-  .meta { color: #5a5566; margin-bottom: 1.5rem; }
-  .tldr { background: #f4f1fa; border-left: 4px solid #7c4dff; padding: .75rem 1rem; border-radius: 0 8px 8px 0; }
-  a { color: #5b3df5; }
-  @media (prefers-color-scheme: dark) {
-    body { color: #e6e1eb; background: #17151a; }
-    th { background: #26222e; } th, td { border-color: #3c3648; }
-    .tldr { background: #211d29; } code { background: #26222e; }
-    h2 { border-color: #3c3648; } .meta { color: #a49dae; } a { color: #b9a5ff; }
-  }
-</style>
-</head>
-<body>
-
-<h1>Privacy Policy — WallFlow</h1>
-<p class="meta">
-  <strong>Effective date:</strong> 2026-09-05<br>
-  <strong>Application:</strong> WallFlow (<code>com.wallflow.app</code>) — an Android TV screensaver /
-  family dashboard with a companion phone remote.<br>
-  <strong>Developer contact:</strong> <a href="mailto:serhiigad@gmail.com">serhiigad@gmail.com</a>
-</p>
-
-<p>WallFlow turns your Android TV into an ambient dashboard (clock, weather, notes, family lists,
-calendar events, live backgrounds) that you control from your phone. This policy explains what data
-the app processes, why, where it is stored, and how you can control it.</p>
-
-<h2>1. TL;DR</h2>
-<div class="tldr">
-<ul>
-  <li>We <strong>do not sell your data</strong> and we show <strong>no ads</strong> (no advertising SDKs are present in the app).</li>
-  <li>The content you put on the board (notes, lists, events, settings) is synced between your devices
-      through <strong>Google Firebase Realtime Database</strong>, hosted in the <strong>EU (europe-west1)</strong> region.</li>
-  <li>Sign-in is <strong>anonymous by default</strong>. An optional Google sign-in exists <strong>only on the TV</strong>
-      and only to let you recover the board after a reinstall.</li>
-  <li>Weather needs coordinates: you either pick a city yourself, or (once, on first launch) the app derives
-      an approximate city from your <strong>IP address</strong> via public geolocation APIs. The app has
-      <strong>no GPS/location permission</strong>.</li>
-  <li>Calendar access is <strong>optional</strong> and only used to display your upcoming events on the TV.</li>
-  <li>Google Drive integration works <strong>only with folders you explicitly provide</strong>; the app never accesses
-      your private Drive files or Google account storage.</li>
-</ul>
-</div>
-
-<h2>2. Data we process and why</h2>
-
-<h3>2.1 Account identifiers (Firebase Authentication)</h3>
-<ul>
-  <li><strong>Anonymous user ID.</strong> On first launch, every device (TV or phone) silently creates an anonymous
-      Firebase Authentication account. Its purpose: let the board recognize your own devices, enforce access rules,
-      and manage pairing. It is tied to the installation, not to you personally.</li>
-  <li><strong>Google account (optional, TV only).</strong> You may link a Google account on the TV so that, after
-      clearing app data or a factory reset, the TV can find and reclaim its board. When you do this, Google provides
-      your <strong>email address, display name and profile photo URL</strong>; these are stored in the Firebase Auth
-      session and cached on the TV in encrypted storage. The board database itself only ever stores the resulting
-      <strong>user ID</strong>, not your email or name.</li>
-  <li>The phone remote does <strong>not</strong> require any Google sign-in.</li>
-</ul>
-
-<h3>2.2 Board content (Firebase Realtime Database)</h3>
-<p>Everything you create on the board is stored in our Firebase Realtime Database so the TV and your paired phones
-can show and edit the same data:</p>
-<table>
-  <tr><th>Data</th><th>Examples</th></tr>
-  <tr><td>Notes</td><td>note text, color, expiry time, optional author display name you type in, author device ID</td></tr>
-  <tr><td>Family lists</td><td>list title, item text, done state, order, timestamps, creator device ID</td></tr>
-  <tr><td>Calendar events</td><td>event title, description, start/end time (typed in the app, or mirrored from your device calendar if you grant the permission — see 2.5)</td></tr>
-  <tr><td>Board settings</td><td>board name, background/layout/clock choices, colors, language, weather city name and its coordinates</td></tr>
-  <tr><td>Device registry</td><td>device name, <strong>device manufacturer and model</strong> (e.g. “Sony BRAVIA 4K GB”), platform (Android / Android TV), role (TV host / phone remote), pairing and last-active timestamps, online status</td></tr>
-  <tr><td>Pairing data</td><td>short-lived pairing codes/tokens (they expire quickly by design), board name, and the requesting device's name/model while a pairing request awaits your confirmation on the TV</td></tr>
-</table>
-<p>Access to a board is restricted by database security rules: only authenticated devices that are members of that
-board can read or write its content.</p>
-
-<h3>2.3 Weather and location</h3>
-<p>To show weather, the app needs a latitude/longitude pair:</p>
-<ul>
-  <li><strong>Open-Meteo</strong> (<code>api.open-meteo.com</code>) — receives the city coordinates and returns the
-      forecast. No API key, no account.</li>
-  <li><strong>Open-Meteo Geocoding</strong> (<code>geocoding-api.open-meteo.com</code>) — receives the city name you
-      type in the city search box.</li>
-  <li><strong>IP-based auto-detection (optional, once).</strong> On the TV's first launch, if no location is set, the
-      app asks free geolocation services <strong>ipapi.co</strong> and <strong>get.geojs.io</strong> to resolve your
-      <strong>IP address</strong> into an approximate city and coordinates. You can prevent this entirely by setting a
-      city manually before/instead. The app holds <strong>no Android location permission</strong> — it never reads GPS.</li>
-  <li><strong>OpenStreetMap Nominatim</strong> (<code>nominatim.openstreetmap.org</code>) — if you pick a point on the
-      map, the coordinates are sent there to obtain a human-readable city name.</li>
-</ul>
-<p>The resulting city name and coordinates are saved in the board settings and reused for weather refreshes.</p>
-
-<h3>2.4 Google Drive backgrounds (user-initiated only)</h3>
-<p>If you choose live video wallpapers from Google Drive, you explicitly provide a <strong>public</strong> Drive folder
-link (or a Google Apps Script URL you set up). The app then requests the file list from Google
-(<code>drive.google.com</code> / Drive API v3) for that folder and downloads the selected video files to the TV's
-local cache.</p>
-<p>Optionally you may paste <strong>your own Google Drive API key</strong> into the app's settings to make the listing
-more reliable. That key is stored <strong>only on your device</strong> (in encrypted storage) and is sent only to
-Google's Drive API. WallFlow has no access to your private Drive files, your Google account's storage, or any other
-data in your Drive.</p>
-
-<h3>2.5 Device calendar (optional permission)</h3>
-<p>The app declares one sensitive runtime permission: <strong>READ_CALENDAR</strong>. If you grant it, WallFlow reads
-the <strong>titles, descriptions and times of upcoming events</strong> (next ~30 days) from your device calendar and
-mirrors them into the board database (section 2.2) so the TV can display them. If you deny it, the calendar widget
-simply stays empty; nothing else is affected. Event details are read on-device via Android's ContentProvider — no
-calendar service API is called by us.</p>
-
-<h3>2.6 Analytics and crash reporting</h3>
-<ul>
-  <li><strong>Firebase Analytics</strong> collects app-usage events: which role was chosen (TV or phone), pairing
-      approved/denied, and which background preset was applied — plus the standard Firebase signals (app version,
-      device model, coarse location derived from IP, a Firebase installation ID). We do <strong>not</strong> attach
-      your Firebase user ID, email or Google account to analytics events.</li>
-  <li><strong>Firebase Crashlytics</strong> collects crash reports: stack trace, device model/OS/app version, and the
-      current device role. This is used solely to fix crashes.</li>
-</ul>
-<p>Both are Google services; their own processing is described in Google's Privacy Policy (§4).</p>
-
-<h3>2.7 QR pairing (camera)</h3>
-<p>To join a board, the phone can scan the pairing QR code shown on the TV. This uses the <strong>Google Code Scanner
-API</strong> (part of Google Play services). The camera image is processed on-device by Play services; WallFlow itself
-never stores, uploads or receives camera images and declares no CAMERA permission.</p>
-
-<h3>2.8 Data stored only on your device</h3>
-<p>In encrypted on-device storage (<code>EncryptedSharedPreferences</code>) the app keeps: your role (TV/phone), board
-ID and device ID, device name, cached Google profile fields (if you signed in on the TV), the Drive folder URL/ID and
-— if you added one — your Drive API key. Video wallpapers are cached in the TV's app-private storage.</p>
-
-<h2>3. Permissions summary</h2>
-<table>
-  <tr><th>Permission</th><th>Required?</th><th>Purpose</th></tr>
-  <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>yes</td><td>sync the board, fetch weather/backgrounds</td></tr>
-  <tr><td><code>READ_CALENDAR</code></td><td><strong>optional</strong> (runtime prompt)</td><td>show upcoming events on the TV</td></tr>
-  <tr><td>Location (GPS), Camera, Contacts, Microphone, Files</td><td><strong>not requested</strong></td><td>— (see §2.3, §2.7)</td></tr>
-</table>
-
-<h2>4. Third-party services we communicate with</h2>
-<table>
-  <tr><th>Service</th><th>What it receives</th><th>For what</th></tr>
-  <tr><td>Google Firebase (Auth, Realtime Database, Analytics, Crashlytics)</td><td>identifiers, board content, usage/crash events</td><td>core functionality</td></tr>
-  <tr><td>Open-Meteo (forecast + geocoding)</td><td>coordinates or city-name query</td><td>weather</td></tr>
-  <tr><td>ipapi.co / get.geojs.io</td><td>your IP address</td><td>one-time approximate city detection</td></tr>
-  <tr><td>OpenStreetMap Nominatim</td><td>coordinates</td><td>city name for a map-picked point</td></tr>
-  <tr><td>Google Drive / Apps Script URLs</td><td>the public folder ID you provided (and your own API key, if you added one)</td><td>video backgrounds you chose</td></tr>
-  <tr><td>Google Play services (Code Scanner, Sign-In)</td><td>camera frames (on-device), account picker data</td><td>pairing, optional TV sign-in</td></tr>
-</table>
-<p>These providers may log requests according to their own privacy policies:
-<a href="https://policies.google.com/privacy">Google Privacy</a> ·
-<a href="https://firebase.google.com/terms">Firebase Terms</a> ·
-<a href="https://open-meteo.com/en/terms">Open-Meteo</a> ·
-<a href="https://ipapi.co/terms/">ipapi.co</a> ·
-<a href="https://get.geojs.io/terms">geojs.io</a> ·
-<a href="https://osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap</a>.</p>
-<p>We do not share your data with data brokers, advertisers, or anyone else; there is no advertising, no ad SDKs,
-and no cross-app tracking in WallFlow.</p>
-
-<h2>5. Where and for how long</h2>
-<ul>
-  <li><strong>Location:</strong> board data and auth identifiers live in Google Firebase infrastructure in the
-      <strong>EU region (europe-west1)</strong>. Analytics/Crashlytics data is processed by Google under the Firebase
-      Data Processing Terms.</li>
-  <li><strong>Retention:</strong> board content is kept while your board exists. You can delete any note, list, item
-      or event at any time from the app; expired notes are removed automatically by the TV host; unpairing a device
-      removes its registry entry. Crash reports are retained by Crashlytics for ~90 days (Google default). Anonymous
-      Firebase accounts may be automatically purged by Firebase after a long period of inactivity (Google's
-      configurable setting, ≥ 60 days).</li>
-  <li><strong>Deletion on request:</strong> to delete a whole board, your user record, or any residual server-side
-      data, write to <a href="mailto:serhiigad@gmail.com">serhiigad@gmail.com</a> from any address; tell us your board
-      name and (if known) device name, and we will remove it and confirm. Uninstalling the app deletes all on-device
-      data.</li>
-</ul>
+<p><strong>Delete only some of your data (without deleting the account):</strong></p>
+<ol>
+  <li>Open the relevant section in the app — on the phone remote or on the TV: notes, family
+      lists, calendar events, or the list of paired devices.</li>
+  <li>Use the delete/remove action on the item you want gone: a note, a whole list or a single
+      list item, an event, or a device (unpairing).</li>
+  <li>The change syncs to every paired device immediately and the item is removed from our
+      servers. Expired notes are deleted automatically by the TV host.</li>
+</ol>
 
 <h2>6. Security</h2>
 <p>All network traffic uses HTTPS/TLS. On the device, sensitive preferences are stored in
