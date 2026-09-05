@@ -173,6 +173,27 @@ no ad SDKs, and no cross-app tracking in WallFlow.
   data, write to **serhiigad@gmail.com** from any address; tell us your board name and (if known)
   device name, and we will remove it and confirm. Uninstalling the app deletes all on-device data.
 
+### Account deletion
+
+To delete your WallFlow account and all data associated with it, follow these steps:
+
+1. **Send an email** to **serhiigad@gmail.com** with the subject line `WallFlow account deletion`.
+   In the message, name your board (e.g. "Living Room TV") and, if you know it, the device name
+   shown in the app. If you linked a Google account on the TV, either write from that Google
+   email or mention it — it helps us find the right record.
+2. **We process the request manually**, normally within 7 days and always within 30 days, and
+   reply to confirm once it is done.
+3. **What is deleted:** your Firebase Authentication user (anonymous or Google-linked), the board
+   and everything in it — notes, lists, calendar events, settings, device registry entries and
+   pairing records.
+4. **What is not deleted by this request:** files in your own Google Drive (you manage those in
+   Drive yourself), and Google's own short-lived operational logs (Crashlytics crash reports
+   expire after ~90 days, Firebase Analytics data expires automatically) — these are retained by
+   Google under the Firebase terms, not by us.
+
+You can also delete individual items (notes, lists, events, devices) yourself at any time in the
+app; unpairing a device removes its registry entry immediately.
+
 ---
 
 ## 6. Security
