@@ -31,7 +31,7 @@
 
 <h1>Privacy Policy — WallFlow</h1>
 <p class="meta">
-  <strong>Effective date:</strong> 2026-09-05<br>
+  <strong>Effective date:</strong> 2026-09-06 (added §2.9 — purchases via Google Play)<br>
   <strong>Application:</strong> WallFlow (<code>com.wallflow.app</code>) — an Android TV screensaver /
   family dashboard with a companion phone remote.<br>
   <strong>Developer contact:</strong> <a href="mailto:serhiigad@gmail.com">serhiigad@gmail.com</a>
@@ -55,6 +55,9 @@ the app processes, why, where it is stored, and how you can control it.</p>
   <li>Calendar access is <strong>optional</strong> and only used to display your upcoming events on the TV.</li>
   <li>Google Drive integration works <strong>only with folders you explicitly provide</strong>; the app never accesses
       your private Drive files or Google account storage.</li>
+  <li>The optional one-time purchase (<strong>WallFlow Pro</strong>) is billed <strong>entirely by Google Play</strong>.
+      We never see or store your card or payment details; the app only caches whether you own the product, on your
+      device.</li>
 </ul>
 </div>
 
@@ -140,7 +143,29 @@ never stores, uploads or receives camera images and declares no CAMERA permissio
 <h3>2.8 Data stored only on your device</h3>
 <p>In encrypted on-device storage (<code>EncryptedSharedPreferences</code>) the app keeps: your role (TV/phone), board
 ID and device ID, device name, cached Google profile fields (if you signed in on the TV), the Drive folder URL/ID and
-— if you added one — your Drive API key. Video wallpapers are cached in the TV's app-private storage.</p>
+— if you added one — your Drive API key. Video wallpapers are cached in the TV's app-private storage. If you bought
+WallFlow Pro, its on-device status cache (§2.9) also lives in app-private storage.</p>
+
+<h3>2.9 Purchases and payments (Google Play)</h3>
+<p>WallFlow offers an optional one-time in-app purchase (“WallFlow Pro”, product id
+<code>wallflow_pro_founder</code>) through <strong>Google Play Billing</strong>. If you choose to buy it:</p>
+<ul>
+  <li><strong>Payment is processed entirely by Google Play.</strong> We never see or store your card number,
+      billing address or any other payment instrument data.</li>
+  <li>The app receives from Google Play only the <strong>purchase state</strong> of our single product (owned /
+      pending / not owned) and the purchase token needed to confirm it. This status is cached <strong>on your
+      device</strong> (app-private storage) so unlocked features keep working offline, and is re-verified with
+      Google Play when the app starts.</li>
+  <li><strong>“Restore purchases”</strong> re-queries your Google Play purchase history for this product on the
+      device; nothing beyond that query leaves your phone.</li>
+  <li>As the developer we receive Google's standard <strong>sales reports</strong> for Play purchases (product,
+      price, country and — where Google provides it — the buyer's name and email) for accounting, support and
+      refund handling. Those records live in Google Play Console under Google's terms, not in our app or
+      database.</li>
+  <li>Analytics events about the purchase funnel (<code>purchase_started</code>, <code>purchase_success</code>,
+      <code>purchase_fail</code>, <code>restore_success</code>, <code>paywall_shown</code>) carry only the product
+      id and a response code — <strong>no user id, no email, no order id</strong> (see §2.6).</li>
+</ul>
 
 <h2>3. Permissions summary</h2>
 <table>
@@ -159,6 +184,7 @@ ID and device ID, device name, cached Google profile fields (if you signed in on
   <tr><td>OpenStreetMap Nominatim</td><td>coordinates</td><td>city name for a map-picked point</td></tr>
   <tr><td>Google Drive / Apps Script URLs</td><td>the public folder ID you provided (and your own API key, if you added one)</td><td>video backgrounds you chose</td></tr>
   <tr><td>Google Play services (Code Scanner, Sign-In)</td><td>camera frames (on-device), account picker data</td><td>pairing, optional TV sign-in</td></tr>
+  <tr><td>Google Play (Billing)</td><td>purchase state of one product, purchase token</td><td>optional one-time Pro unlock — payments are handled by Google, not by us</td></tr>
 </table>
 <p>These providers may log requests according to their own privacy policies:
 <a href="https://policies.google.com/privacy">Google Privacy</a> ·
@@ -183,7 +209,8 @@ and no cross-app tracking in WallFlow.</p>
   <li><strong>Deletion on request:</strong> to delete a whole board, your user record, or any residual server-side
       data, write to <a href="mailto:serhiigad@gmail.com">serhiigad@gmail.com</a> from any address; tell us your board
       name and (if known) device name, and we will remove it and confirm. Uninstalling the app deletes all on-device
-      data.</li>
+      data (including the WallFlow Pro status cache — §2.9). Purchase and payment records are kept by Google in
+      Play Console under Google's own retention terms.</li>
 </ul>
 
 <h3 id="account-deletion">Account and data deletion</h3>
