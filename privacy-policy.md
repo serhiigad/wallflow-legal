@@ -1,6 +1,6 @@
 # Privacy Policy — WallFlow
 
-**Effective date:** 2026-09-05
+**Effective date:** 2026-09-06 (added §2.9 — purchases via Google Play)
 **Application:** WallFlow (`com.wallflow.app`) — an Android TV screensaver / family dashboard
 with a companion phone remote.
 **Developer contact:** serhiigad@gmail.com
@@ -24,6 +24,9 @@ data the app processes, why, where it is stored, and how you can control it.
 - Calendar access is **optional** and only used to display your upcoming events on the TV.
 - Google Drive integration works **only with folders you explicitly provide**; the app never
   accesses your private Drive files or Google account storage.
+- The optional one-time purchase (**WallFlow Pro**) is billed **entirely by Google Play**. We
+  never see or store your card or payment details; the app only caches whether you own the
+  product, on your device.
 
 ---
 
@@ -121,7 +124,29 @@ CAMERA permission.
 In encrypted on-device storage (Android `EncryptedSharedPreferences`) the app keeps: your role
 (TV/phone), board ID and device ID, device name, cached Google profile fields (if you signed in on
 the TV), the Drive folder URL/ID and — if you added one — your Drive API key. Video wallpapers are
-cached in the TV's app-private storage.
+cached in the TV's app-private storage. If you bought WallFlow Pro, its on-device status cache
+(§2.9) also lives in app-private storage.
+
+### 2.9 Purchases and payments (Google Play)
+
+WallFlow offers an optional one-time in-app purchase ("WallFlow Pro", product id
+`wallflow_pro_founder`) through **Google Play Billing**. If you choose to buy it:
+
+- **Payment is processed entirely by Google Play.** We never see or store your card number,
+  billing address or any other payment instrument data.
+- The app receives from Google Play only the **purchase state** of our single product (owned /
+  pending / not owned) and the purchase token needed to confirm it. This status is cached **on
+  your device** (app-private storage) so unlocked features keep working offline, and is
+  re-verified with Google Play when the app starts.
+- **"Restore purchases"** re-queries your Google Play purchase history for this product on the
+  device; nothing beyond that query leaves your phone.
+- As the developer we receive Google's standard **sales reports** for Play purchases (product,
+  price, country and — where Google provides it — the buyer's name and email) for accounting,
+  support and refund handling. Those records live in Google Play Console under Google's terms,
+  not in our app or database.
+- Analytics events about the purchase funnel (`purchase_started`, `purchase_success`,
+  `purchase_fail`, `restore_success`, `paywall_shown`) carry only the product id and a response
+  code — **no user id, no email, no order id** (see §2.6).
 
 ---
 
@@ -145,6 +170,7 @@ cached in the TV's app-private storage.
 | OpenStreetMap Nominatim | coordinates | city name for a map-picked point |
 | Google Drive / Apps Script URLs | the public folder ID you provided (and your own API key, if you added one) | video backgrounds you chose |
 | Google Play services (Code Scanner, Sign-In) | camera frames (on-device), account picker data | pairing, optional TV sign-in |
+| Google Play (Billing) | purchase state of one product, purchase token | optional one-time Pro unlock — payments are handled by Google, not by us |
 
 These providers may log requests according to their own privacy policies:
 [Google Privacy](https://policies.google.com/privacy) ·
@@ -171,7 +197,9 @@ no ad SDKs, and no cross-app tracking in WallFlow.
   after a long period of inactivity (Google's configurable setting, ≥ 60 days).
 - **Deletion on request:** to delete a whole board, your user record, or any residual server-side
   data, write to **serhiigad@gmail.com** from any address; tell us your board name and (if known)
-  device name, and we will remove it and confirm. Uninstalling the app deletes all on-device data.
+  device name, and we will remove it and confirm. Uninstalling the app deletes all on-device data
+  (including the WallFlow Pro status cache — §2.9). Purchase and payment records are kept by
+  Google in Play Console under Google's own retention terms.
 
 ### Account and data deletion
 
